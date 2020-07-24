@@ -1,22 +1,26 @@
 import React from 'react';
-import axios from 'axios';
+import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
+import ImgList from './ImageList';
 
 class App extends React.Component {
-  onSearchSubmit(term) {
-    axios.get('https://api.unsplash.com/search/photos', {
+  state = { images: [] };
+
+  // need to use arrow func and async kwd to assign to an instance property
+  onSearchSubmit = async term  => {
+    const response = await unsplash.get('/search/photos', {
       params: { query: term },
-      headers: {
-        Authorization: 'Client-ID wxhTzOANJJJXVaMgMReg2owZ705jxn3qp0ZjCEPdyE4' 
-      }
     });
-  }
+
+    this.setState({ images: response.data.results });
+  };
 
   render () {
     return (
       <div className="ui container" style={{marginTop: 10}}>
         {/* prop passed into the SearchBar class component */}
         <SearchBar onSubmit={this.onSearchSubmit}/>
+        <ImgList images={this.state.images}/>
       </div>    
     );
   }
