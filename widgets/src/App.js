@@ -1,5 +1,6 @@
 import React from 'react';
-import Accordion from './components/Accordion';
+// import Accordion from './components/Accordion';
+import Search from './components/Search';
 
 // static array to be passed into Accordion component
 const items = [
@@ -23,7 +24,7 @@ const items = [
 export default () => {
   return (
     <div>
-      <Accordion items={items} />
+      <Search />
     </div>
   )
 }
