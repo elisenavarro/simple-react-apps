@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 
-const postReducer = (state = [], action) => {
+// return empty array on 1st call
+// then state becomes whatever was the prevState
+const postsReducer = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_POSTS':
       return action.payload;
@@ -12,6 +14,7 @@ const postReducer = (state = [], action) => {
 const usersReducer =  (state = [], action) => {
   switch (action.type) {
     case 'FETCH_USER':
+      // add record to new state array
       return [...state, action.payload];
     default:
       return state;
