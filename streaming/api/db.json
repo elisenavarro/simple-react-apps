@@ -1,0 +1,28 @@
+{
+  "streams": [
+    {
+      "title": "My First Stream",
+      "description": "This is the first streaming video.",
+      "userId": "1111118375869372920",
+      "id": 1
+    },
+    {
+      "title": "My Second Stream",
+      "description": "This is the second streaming video.",
+      "userId": "111111837586994837920",
+      "id": 2
+    },
+    {
+      "title": "My Best Video Stream",
+      "description": "The best streaming video.",
+      "userId": "111111837586993839920",
+      "id": 3
+    },
+    {
+      "title": "Example Video Stream",
+      "description": "This video stream is an example",
+      "userId": "116616152820852832516",
+      "id": 4
+    }
+  ]
+}
