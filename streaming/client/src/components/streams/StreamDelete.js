@@ -34,13 +34,13 @@ class StreamDelete extends Component {
     }
     return `Are you sure you want to delete the video stream: ${
       this.props.stream.title
-    }`;
+    } ?`;
   }
 
   render() {
     return (
       <Modal
-        title="Delete Stream"
+        title="Delete Video Stream"
         content={this.renderContent()}
         actions={this.renderActions()}
         onDismiss={() => history.push('/')}
