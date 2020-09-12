@@ -16,10 +16,10 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 
 // Action Creator, function inside function
 export const fetchPosts = () => async dispatch => {
-    const res = await jsonPlaceholder.get('/posts');
+  const res = await jsonPlaceholder.get('/posts');
 
-    dispatch ({ type: 'FETCH_POSTS', payload: res.data })
-  };
+  dispatch ({ type: 'FETCH_POSTS', payload: res.data })
+};
 
 //  Action Creator, fetch single user
 export const fetchUser = id => async dispatch => {
